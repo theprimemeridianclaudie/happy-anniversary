@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff5f1" />
+  <title>Our First Year ♡</title>
+  <style>
+    :root { --ink:#553b45;--muted:#836d73;--rose:#c97888;--paper:#fffaf6;--blush:#fff0ed;--line:#e8d9d9 }
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;background:linear-gradient(150deg,#fff8f3 0%,#fff3f2 45%,#f9f1f5 100%);font-family:Georgia,'Times New Roman',serif;color:var(--ink);min-height:100vh}
+    .stars{position:fixed;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(#dba9ae 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 95%)}
+    main{position:relative;max-width:900px;margin:auto;padding:30px 22px 90px}
+    header{text-align:center;padding:85px 12px 65px}
+    .eyebrow{letter-spacing:.25em;text-transform:uppercase;font:12px Arial,sans-serif;color:#a77c86}
+    .heart{font-size:37px;color:var(--rose);margin:21px auto;animation:float 3s ease-in-out infinite}
+    @keyframes float {50%{transform:translateY(-7px)}}
+    h1{font-weight:normal;line-height:1.12;font-size:clamp(48px,9vw,85px);margin:0}
+    .intro{max-width:520px;margin:24px auto;color:var(--muted);font-size:18px;line-height:1.7}
+    .date{display:inline-block;border:1px solid #e7c7cb;border-radius:50px;padding:12px 22px;letter-spacing:.08em;font:12px Arial,sans-serif;color:#9c6a77;background:#ffffff80}
+    .section-heading{text-align:center;margin:20px 0 38px}
+    h2{font-size:clamp(27px,5vw,39px);font-weight:normal;margin:8px 0 12px}
+    .section-heading p{color:var(--muted);line-height:1.6}
+    .video-grid{display:grid;gap:31px}
+    .video-card{padding:17px 17px 25px;border:1px solid #f1dfdd;border-radius:23px;background:#fffdfcdd;box-shadow:0 12px 35px #9c647516}
+    .video-frame{aspect-ratio:16/9;position:relative;border-radius:13px;overflow:hidden;background:#f1e5e5}
+    video{display:block;width:100%;height:100%;background:#2b1e26;object-fit:contain}
+    .missing{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;width:100%;height:100%;text-align:center;padding:18px;color:#9e7580;font:14px Arial,sans-serif}
+    .missing .symbol{font-family:Georgia,serif;font-size:40px}
+    .card-body{text-align:center;padding:10px 12px 0}
+    .count{font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#bb8895}
+    h3{font-size:28px;font-weight:normal;margin:8px 0}
+    .video-number{font:18px Georgia,serif;color:#a46b7a}
+    .cat-path{position:relative;height:62px;overflow:hidden;pointer-events:none}
+    .cat-path-top{margin-bottom:-27px}
+    .cat-path-mid{margin:40px 0 -75px}
+    .cat-traveller{position:absolute;left:0;bottom:0;width:70px;height:61px;animation:cat-roam 15s linear infinite alternate}
+    .cat-traveller.reverse{left:auto;right:0;animation:cat-roam-reverse 19s linear infinite alternate}
+    .cat-step{position:absolute;inset:0;width:70px;height:auto;image-rendering:pixelated;object-fit:contain}
+    .step-one{animation:cat-step-a .44s steps(1,end) infinite}
+    .step-two{animation:cat-step-b .44s steps(1,end) infinite}
+    @keyframes cat-step-a{0%,49%{opacity:1}50%,100%{opacity:0}}
+    @keyframes cat-step-b{0%,49%{opacity:0}50%,100%{opacity:1}}
+    @keyframes cat-roam{from{transform:translateX(0)}to{transform:translateX(min(700px,calc(100vw - 115px)))}}
+    @keyframes cat-roam-reverse{from{transform:translateX(0) scaleX(-1)}to{transform:translateX(max(-700px,calc(115px - 100vw))) scaleX(-1)}}
+    @media(prefers-reduced-motion:reduce){.cat-traveller,.cat-step{animation:none}.step-two{display:none}}
+
+    .letter{margin:78px auto 45px;max-width:700px;text-align:center;background:#fffdfbbd;border:1px solid #ead7d7;border-radius:25px;padding:55px clamp(21px,6vw,70px);box-shadow:0 14px 40px #9c647512}
+    .letter p{font-size:18px;line-height:1.9;color:#715b63}
+    .signature{font-style:italic;color:var(--rose)!important;font-size:22px!important}
+    footer{text-align:center;color:#aa8b92;font:12px Arial,sans-serif;letter-spacing:.08em;padding-top:15px}
+    @media(min-width:760px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-card:last-child{grid-column:1/-1;max-width:560px;width:100%;margin:auto}}
+    @media(max-width:540px){header{padding-top:60px} .letter{margin-top:55px;padding-top:38px;padding-bottom:38px}}
+  </style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<main>
+  <div class="cat-path cat-path-top" aria-hidden="true"><div class="cat-traveller"><img class="cat-step step-one" src="assets/pixel-tuxedo-cat-1.png" alt=""><img class="cat-step step-two" src="assets/pixel-tuxedo-cat-2.png" alt=""></div></div>
+  <header>
+    <div class="eyebrow">A little corner of the universe for us</div>
+    <div class="heart" aria-hidden="true">♡</div>
+    <h1>One year of<br />being silly with you!</h1>
+    <p class="intro">For Ivan: A little something to make your day feel better.</p>
+    <span class="date">20 OCTOBER 2025 — 20 OCTOBER 2026</span>
+  </header>
+  <section aria-label="Our three videos">
+    <div class="video-grid">
+      <article class="video-card"><div class="video-frame"><video controls preload="metadata" playsinline aria-label="Video one"><source src="videos/01-how-it-began.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div><div class="card-body"><span class="video-number">1</span></div></article>
+      <article class="video-card"><div class="video-frame"><video controls preload="metadata" playsinline aria-label="Video two"><source src="videos/02-little-moments.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div><div class="card-body"><span class="video-number">2</span></div></article>
+      <article class="video-card"><div class="video-frame"><video controls preload="metadata" playsinline aria-label="Video three"><source src="videos/03-to-more-adventures.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div><div class="card-body"><span class="video-number">3</span></div></article>
+    </div>
+  </section>
+  <div class="cat-path cat-path-mid" aria-hidden="true"><div class="cat-traveller reverse"><img class="cat-step step-one" src="assets/pixel-tuxedo-cat-1.png" alt=""><img class="cat-step step-two" src="assets/pixel-tuxedo-cat-2.png" alt=""></div></div>
+  <section class="letter" aria-label="A note for Ivan">
+    <h2>Hemlo Banban,</h2>
+    <p>Thank you for being the sun who lit my life when everything felt so dark. You were the greatest plot twist in my life.</p>
+    <p>I love you. You are a wonderful human being that deserves all the love.</p>
+    <p class="signature">Papaya</p>
+  </section>
+  <footer>MADE FOR YOU, WITH LOVE · 20.10.2026</footer>
+</main>
+<script>
+  document.querySelectorAll('video').forEach(video => {
+    const source = video.querySelector('source');
+    video.addEventListener('error', showPlaceholder, true);
+    source.addEventListener('error', showPlaceholder);
+    function showPlaceholder() {
+      if (!video.parentNode || video.parentNode.querySelector('.missing')) return;
+      video.style.display='none';
+      const el=document.createElement('div');el.className='missing';
+      el.innerHTML='<span class="symbol">♡</span><span>Video file not added yet.</span>';
+      video.parentNode.appendChild(el);
+    }
+  });
+</script>
+</body>
+</html>
