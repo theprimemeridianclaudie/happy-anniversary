@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff5f1" />
+  <title>Our First Year ♡</title>
+  <style>
+    :root { --ink:#553b45;--muted:#836d73;--rose:#c97888;--paper:#fffaf6;--blush:#fff0ed;--line:#e8d9d9 }
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;background:linear-gradient(150deg,#fff8f3 0%,#fff3f2 45%,#f9f1f5 100%);font-family:Georgia,'Times New Roman',serif;color:var(--ink);min-height:100vh}
+    .stars{position:fixed;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(#dba9ae 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 95%)}
+    main{position:relative;max-width:900px;margin:auto;padding:30px 22px 90px}
+    header{text-align:center;padding:85px 12px 65px}
+    .eyebrow{letter-spacing:.25em;text-transform:uppercase;font:12px Arial,sans-serif;color:#a77c86}
+    .heart{font-size:37px;color:var(--rose);margin:21px auto;animation:float 3s ease-in-out infinite}
+    @keyframes float {50%{transform:translateY(-7px)}}
+    h1{font-weight:normal;line-height:1.12;font-size:clamp(48px,9vw,85px);margin:0}
+    .intro{max-width:520px;margin:24px auto;color:var(--muted);font-size:18px;line-height:1.7}
+    .date{display:inline-block;border:1px solid #e7c7cb;border-radius:50px;padding:12px 22px;letter-spacing:.08em;font:12px Arial,sans-serif;color:#9c6a77;background:#ffffff80}
+    .section-heading{text-align:center;margin:20px 0 38px}
+    h2{font-size:clamp(27px,5vw,39px);font-weight:normal;margin:8px 0 12px}
+    .section-heading p{color:var(--muted);line-height:1.6}
+    .video-grid{display:grid;gap:31px}
+    .video-card{padding:17px 17px 25px;border:1px solid #f1dfdd;border-radius:23px;background:#fffdfcdd;box-shadow:0 12px 35px #9c647516}
+    .video-frame{aspect-ratio:16/9;position:relative;border-radius:13px;overflow:hidden;background:#f1e5e5}
+    video{display:block;width:100%;height:100%;background:#2b1e26;object-fit:contain}
+    .missing{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;width:100%;height:100%;text-align:center;padding:18px;color:#9e7580;font:14px Arial,sans-serif}
+    .missing .symbol{font-family:Georgia,serif;font-size:40px}
+    .card-body{text-align:center;padding:10px 12px 0}
+    .count{font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#bb8895}
+    h3{font-size:28px;font-weight:normal;margin:8px 0}
+    .caption{color:var(--muted);font-size:16px;line-height:1.6;margin:0}
+    .letter{margin:78px auto 45px;max-width:700px;text-align:center;background:#fffdfbbd;border:1px solid #ead7d7;border-radius:25px;padding:55px clamp(21px,6vw,70px);box-shadow:0 14px 40px #9c647512}
+    .letter p{font-size:18px;line-height:1.9;color:#715b63}
+    .signature{font-style:italic;color:var(--rose)!important;font-size:22px!important}
+    footer{text-align:center;color:#aa8b92;font:12px Arial,sans-serif;letter-spacing:.08em;padding-top:15px}
+    @media(min-width:760px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-card:last-child{grid-column:1/-1;max-width:560px;width:100%;margin:auto}}
+    @media(max-width:540px){header{padding-top:60px} .letter{margin-top:55px;padding-top:38px;padding-bottom:38px}}
+  </style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<main>
+  <header>
+    <div class="eyebrow">A little corner of the universe for us</div>
+    <div class="heart" aria-hidden="true">♡</div>
+    <h1>One year,<br />a thousand little moments.</h1>
+    <p class="intro">For Ivan — three little pieces of our story, collected with love. Some moments are too precious to leave only in our memories.</p>
+    <span class="date">20 OCTOBER 2025 — 20 OCTOBER 2026</span>
+  </header>
+  <section aria-label="Our three videos">
+    <div class="section-heading">
+      <span class="eyebrow">Our little time capsule</span>
+      <h2>Three chapters of us</h2>
+      <p>Press play. Take your time. This is our story.</p>
+    </div>
+    <div class="video-grid">
+      <article class="video-card"><div class="video-frame"><video controls preload="metadata" playsinline aria-label="Video one"><source src="videos/01-how-it-began.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div><div class="card-body"><span class="count">Chapter one</span><h3>How it began</h3><p class="caption">The first moments that became everything.</p></div></article>
+      <article class="video-card"><div class="video-frame"><video controls preload="metadata" playsinline aria-label="Video two"><source src="videos/02-little-moments.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div><div class="card-body"><span class="count">Chapter two</span><h3>The little moments</h3><p class="caption">All the ordinary days that felt extraordinary with you.</p></div></article>
+      <article class="video-card"><div class="video-frame"><video controls preload="metadata" playsinline aria-label="Video three"><source src="videos/03-to-more-adventures.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div><div class="card-body"><span class="count">Chapter three</span><h3>To more adventures</h3><p class="caption">One year down, and so many memories yet to make.</p></div></article>
+    </div>
+  </section>
+  <section class="letter" aria-label="Anniversary letter">
+    <div class="eyebrow">A note, just for you</div>
+    <h2>Dear Ivan,</h2>
+    <p>Somewhere between the big adventures and the quiet, everyday moments, we made a whole year of memories together.</p>
+    <p>Thank you for being beside me, for making me laugh, for the gentleness, and for all the little things that became our favourite stories.</p>
+    <p>Here's to our first year — and to everything we haven't discovered yet.</p>
+    <p class="signature">With love, always ♡</p>
+  </section>
+  <footer>MADE FOR YOU, WITH LOVE · 20.10.2026</footer>
+</main>
+<script>
+  document.querySelectorAll('video').forEach(video => {
+    const source = video.querySelector('source');
+    video.addEventListener('error', showPlaceholder, true);
+    source.addEventListener('error', showPlaceholder);
+    function showPlaceholder() {
+      if (!video.parentNode || video.parentNode.querySelector('.missing')) return;
+      video.style.display='none';
+      const el=document.createElement('div');el.className='missing';
+      el.innerHTML='<span class="symbol">♡</span><span>Your video will appear here<br>once its file is added.</span>';
+      video.parentNode.appendChild(el);
+    }
+  });
+</script>
+</body>
+</html>
