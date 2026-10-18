@@ -23,83 +23,103 @@
     h2{font-size:clamp(27px,5vw,39px);font-weight:normal;margin:8px 0 12px}
     .section-heading p{color:var(--muted);line-height:1.6}
 
-    .link-grid{
+.link-grid{
   display:grid;
-  gap:25px;
-  max-width:700px;
+  grid-template-columns:repeat(2, 1fr);
+  gap:16px;
+  max-width:620px;
   margin:auto;
 }
 
 .link-card{
   display:block;
   position:relative;
-  padding:34px 28px;
+  padding:22px 18px;
   text-align:center;
   text-decoration:none;
   color:var(--ink);
   border:1px solid #f1dfdd;
-  border-radius:23px;
+  border-radius:18px;
   background:#fffdfcdd;
-  box-shadow:0 12px 35px #9c647516;
+  box-shadow:0 8px 25px #9c647516;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 .link-card:hover{
-  transform:translateY(-5px) rotate(-.4deg);
-  box-shadow:0 18px 45px #9c647526;
+  transform:translateY(-4px) rotate(-1deg);
+  box-shadow:0 12px 30px #9c647526;
   border-color:#e5bdc3;
 }
 
 .link-card:nth-child(even):hover{
-  transform:translateY(-5px) rotate(.4deg);
+  transform:translateY(-4px) rotate(1deg);
 }
 
 .link-heart{
   display:block;
-  font-size:32px;
+  font-size:25px;
   color:var(--rose);
-  margin-bottom:10px;
+  margin-bottom:6px;
   transition:transform .25s ease;
 }
 
 .link-card:hover .link-heart{
-  transform:scale(1.2);
+  transform:scale(1.25);
 }
 
 .link-number{
   display:block;
-  margin-bottom:8px;
-  font:11px Arial,sans-serif;
-  letter-spacing:.2em;
+  margin-bottom:6px;
+  font:10px Arial,sans-serif;
+  letter-spacing:.18em;
   text-transform:uppercase;
   color:#bb8895;
 }
 
 .link-title{
   display:block;
-  font-size:25px;
-  margin-bottom:10px;
+  font-size:20px;
+  margin-bottom:6px;
 }
 
 .link-note{
   display:block;
   color:var(--muted);
-  font-size:15px;
+  font-size:13px;
   font-style:italic;
-  line-height:1.5;
+  line-height:1.4;
 }
 
 .link-open{
   display:inline-block;
-  margin-top:17px;
-  padding:9px 17px;
+  margin-top:12px;
+  padding:7px 13px;
   border:1px solid #e7c7cb;
   border-radius:50px;
   color:#9c6a77;
-  font:11px Arial,sans-serif;
+  font:10px Arial,sans-serif;
   letter-spacing:.1em;
   text-transform:uppercase;
   background:#fff8f7;
+}
+
+/* Keep them side by side on most phones too */
+@media(max-width:420px){
+  .link-grid{
+    gap:10px;
+  }
+
+  .link-card{
+    padding:18px 10px;
+  }
+
+  .link-title{
+    font-size:17px;
+  }
+
+  .link-note{
+    font-size:12px;
+  }
 }
     
     .cat-path{position:relative;height:62px;overflow:hidden;pointer-events:none}
@@ -139,9 +159,9 @@
   <section aria-label="I MADE THIS FOR YOU!">
 
   <div class="section-heading">
-    <div class="eyebrow">PLEASE WATCH!</div>
-    <h2>I promise these are definitely very serious and important.</h2>
-  </div>
+  <div class="eyebrow">VERY IMPORTANT BUSINESS</div>
+  <h2>I made you things ♡</h2>
+</div>
 
   <div class="link-grid">
 
@@ -152,9 +172,7 @@
 
       <span class="link-heart">♡</span>
       <span class="link-number">Exhibit No. 01</span>
-      <span class="link-title">Open this one first!</span>
-      <span class="link-note">Hehehehe</span>
-      <span class="link-open">open me ♡</span>
+      <span class="link-open">open me first! ♡</span>
 
     </a>
 
@@ -165,11 +183,8 @@
 
       <span class="link-heart">♡</span>
       <span class="link-number">Exhibit No. 02</span>
-      <span class="link-title">Okay, now this one...</span>
-      <span class="link-note">
-        Proceed with extreme silliness.
-      </span>
-      <span class="link-open">open me ♡</span>
+      <span class="link-title">Did you cry? lol Now open this next one</span>
+      <span class="link-open">Yippeee</span>
 
     </a>
 
