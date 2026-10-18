@@ -122,30 +122,89 @@
   }
 }
     
-    .cat-path{position:relative;height:62px;overflow:hidden;pointer-events:none}
-    .cat-path-top{margin-bottom:-27px}
-    .cat-path-mid{margin:40px 0 -75px}
-    .cat-traveller{position:absolute;left:0;bottom:0;width:70px;height:61px;animation:cat-roam 15s linear infinite alternate}
-    .cat-traveller.reverse{left:auto;right:0;animation:cat-roam-reverse 19s linear infinite alternate}
-    .cat-step{position:absolute;inset:0;width:70px;height:auto;image-rendering:pixelated;object-fit:contain}
-    .step-one{animation:cat-step-a .44s steps(1,end) infinite}
-    .step-two{animation:cat-step-b .44s steps(1,end) infinite}
-    @keyframes cat-step-a{0%,49%{opacity:1}50%,100%{opacity:0}}
-    @keyframes cat-step-b{0%,49%{opacity:0}50%,100%{opacity:1}}
-    @keyframes cat-roam{from{transform:translateX(0)}to{transform:translateX(min(700px,calc(100vw - 115px)))}}
-    @keyframes cat-roam-reverse{from{transform:translateX(0) scaleX(-1)}to{transform:translateX(max(-700px,calc(115px - 100vw))) scaleX(-1)}}
-    @media(prefers-reduced-motion:reduce){.cat-traveller,.cat-step{animation:none}.step-two{display:none}}
+   /* THE TWO-CAT DEPARTMENT */
+.cat-path{
+  position:relative;
+  height:70px;
+  overflow:hidden;
+  pointer-events:none;
+}
+
+.cat-path-mid{
+  margin:35px 0 -70px;
+}
+
+/* Both cats travel together */
+.cat-traveller{
+  position:absolute;
+  left:0;
+  bottom:0;
+
+  display:flex;
+  align-items:flex-end;
+  gap:2px;
+
+  width:140px;
+
+  animation:cat-roam 15s linear infinite alternate;
+}
+
+/* Each individual cat */
+.cat{
+  width:70px;
+  height:61px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+
+/* Walk across the page together */
+@keyframes cat-roam{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(
+      min(650px, calc(100vw - 185px))
+    );
+  }
+}
+
+/* Face the other way when travelling back */
+.cat-traveller.reverse{
+  left:auto;
+  right:0;
+  animation:cat-roam-reverse 15s linear infinite alternate;
+}
+
+@keyframes cat-roam-reverse{
+  from{
+    transform:translateX(0) scaleX(-1);
+  }
+
+  to{
+    transform:translateX(
+      max(-650px, calc(185px - 100vw))
+    ) scaleX(-1);
+  }
+}
+
+/* Accessibility */
+@media(prefers-reduced-motion:reduce){
+  .cat-traveller{
+    animation:none;
+  }
+}
 
     .letter{margin:78px auto 45px;max-width:700px;text-align:center;background:#fffdfbbd;border:1px solid #ead7d7;border-radius:25px;padding:55px clamp(21px,6vw,70px);box-shadow:0 14px 40px #9c647512}
     .letter p{font-size:18px;line-height:1.9;color:#715b63}
     .signature{font-style:italic;color:var(--rose)!important;font-size:22px!important}
     footer{text-align:center;color:#aa8b92;font:12px Arial,sans-serif;letter-spacing:.08em;padding-top:15px}
-    @media(min-width:760px){.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.video-card:last-child{grid-column:1/-1;max-width:560px;width:100%;margin:auto}}
-    @media(max-width:540px){header{padding-top:60px} .letter{margin-top:55px;padding-top:38px;padding-bottom:38px}}
+
   </style>
 </head>
 <body>
-<div class="stars" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
 <main>
   <header>
     <h1>One year of<br />being silly with you!</h1>
@@ -180,7 +239,7 @@
 
       <span class="link-heart">♡</span>
       <span class="link-number">Exhibit No. 02</span>
-      <span class="link-title">How was it? Now open this next one</span>
+      <span class="link-title">Oh no... There's more!</span>
       <span class="link-open">Yippeee~~</span>
 
     </a>
@@ -188,7 +247,25 @@
   </div>
 </section>
   
-  <div class="cat-path cat-path-mid" aria-hidden="true"><div class="cat-traveller reverse"><img class="cat-step step-one" src="https://media.tenor.com/TE-4ME76MXsAAAAj/maxwell-the-cat.gif" alt=""><img class="cat-step step-two" src="https://media.tenor.com/TE-4ME76MXsAAAAj/maxwell-the-cat.gif" alt=""></div></div>
+<div class="cat-path cat-path-mid" aria-hidden="true">
+
+  <div class="cat-traveller">
+
+    <img
+      class="cat"
+      src="https://media.tenor.com/TE-4ME76MXsAAAAj/maxwell-the-cat.gif"
+      alt=""
+    >
+
+    <img
+      class="cat"
+      src="https://media.tenor.com/TE-4ME76MXsAAAAj/maxwell-the-cat.gif"
+      alt=""
+    >
+
+  </div>
+
+</div>
   <section class="letter" aria-label="A note for Ivan">
     <h2>Hemlo Banban,</h2>
     <p>Thank you for being the ☀️sun☀️ who lit my life when everything felt so dark. You were the greatest plot twist in my life.</p>
