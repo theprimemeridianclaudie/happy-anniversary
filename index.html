@@ -6,11 +6,70 @@
   <meta name="theme-color" content="#fff5f1" />
   <title>Our First Year ♡</title>
   <style>
-    :root { --ink:#553b45;--muted:#836d73;--rose:#c97888;--paper:#fffaf6;--blush:#fff0ed;--line:#e8d9d9 }
+
+    :root {
+  --ink:#59491f;
+  --muted:#857342;
+  --rose:#e5ad18;
+  --paper:#fffdf2;
+  --blush:#fff7c9;
+  --line:#eadb91;
+  --banana:#f6c928;
+  --banana-soft:#fff1a8;
+}
+    
     * {box-sizing:border-box}
     html {scroll-behavior:smooth}
-    body {margin:0;background:linear-gradient(150deg,#fff8f3 0%,#fff3f2 45%,#f9f1f5 100%);font-family:Georgia,'Times New Roman',serif;color:var(--ink);min-height:100vh}
-    .stars{position:fixed;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(#dba9ae 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 95%)}
+    body {
+  margin:0;
+  background:
+    linear-gradient(
+      150deg,
+      #fffef4 0%,
+      #fff9cf 45%,
+      #fff3a8 100%
+    );
+  font-family:Georgia,'Times New Roman',serif;
+  color:var(--ink);
+  min-height:100vh;
+}
+    
+.bananas{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+.banana{
+  position:absolute;
+  opacity:.13;
+  font-size:30px;
+  animation:banana-float 7s ease-in-out infinite;
+}
+
+.banana:nth-child(1){left:5%;top:8%;transform:rotate(-20deg)}
+.banana:nth-child(2){left:19%;top:28%;transform:rotate(15deg)}
+.banana:nth-child(3){right:8%;top:13%;transform:rotate(24deg)}
+.banana:nth-child(4){right:22%;top:39%;transform:rotate(-13deg)}
+.banana:nth-child(5){left:8%;top:58%;transform:rotate(19deg)}
+.banana:nth-child(6){right:5%;top:68%;transform:rotate(-25deg)}
+.banana:nth-child(7){left:27%;top:82%;transform:rotate(-12deg)}
+.banana:nth-child(8){right:29%;top:91%;transform:rotate(18deg)}
+
+@keyframes banana-float{
+  50%{
+    translate:0 -8px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .banana{
+    animation:none;
+  }
+}
+    
     main{position:relative;max-width:900px;margin:auto;padding:30px 22px 90px}
     header{text-align:center;padding:25px 12px 35px}
     .eyebrow{letter-spacing:.25em;text-transform:uppercase;font:12px Arial,sans-serif;color:#a77c86}
@@ -18,7 +77,17 @@
     @keyframes float {50%{transform:translateY(-7px)}}
     h1{font-weight:normal;line-height:1.12;font-size:clamp(48px,9vw,85px);margin:0}
     .intro{max-width:520px;margin:24px auto;color:var(--muted);font-size:18px;line-height:1.7}
-    .date{display:inline-block;border:1px solid #e7c7cb;border-radius:50px;padding:12px 22px;letter-spacing:.08em;font:12px Arial,sans-serif;color:#9c6a77;background:#ffffff80}
+   
+    .date{
+  display:inline-block;
+  border:1px solid #e4cd68;
+  border-radius:50px;
+  padding:12px 22px;
+  letter-spacing:.08em;
+  font:12px Arial,sans-serif;
+  color:#82691c;
+  background:#fffbe3cc;
+}
     .section-heading{text-align:center;margin:20px 0 38px}
     h2{font-size:clamp(27px,5vw,39px);font-weight:normal;margin:8px 0 12px}
     .section-heading p{color:var(--muted);line-height:1.6}
@@ -38,33 +107,25 @@
   text-align:center;
   text-decoration:none;
   color:var(--ink);
-  border:1px solid #f1dfdd;
+  border:1px solid #eadb91;
   border-radius:18px;
-  background:#fffdfcdd;
-  box-shadow:0 8px 25px #9c647516;
+  background:#fffdf0dd;
+  box-shadow:0 8px 25px #b9972718;
   transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 .link-card:hover{
   transform:translateY(-4px) rotate(-1deg);
-  box-shadow:0 12px 30px #9c647526;
-  border-color:#e5bdc3;
-}
-
-.link-card:nth-child(even):hover{
-  transform:translateY(-4px) rotate(1deg);
+  box-shadow:0 12px 30px #b9972730;
+  border-color:#e0bd3e;
 }
 
 .link-heart{
   display:block;
   font-size:25px;
-  color:var(--rose);
+  color:#e5ad18;
   margin-bottom:6px;
   transition:transform .25s ease;
-}
-
-.link-card:hover .link-heart{
-  transform:scale(1.25);
 }
 
 .link-number{
@@ -73,34 +134,20 @@
   font:10px Arial,sans-serif;
   letter-spacing:.18em;
   text-transform:uppercase;
-  color:#bb8895;
-}
-
-.link-title{
-  display:block;
-  font-size:20px;
-  margin-bottom:6px;
-}
-
-.link-note{
-  display:block;
-  color:var(--muted);
-  font-size:13px;
-  font-style:italic;
-  line-height:1.4;
+  color:#b2922d;
 }
 
 .link-open{
   display:inline-block;
   margin-top:12px;
   padding:7px 13px;
-  border:1px solid #e7c7cb;
+  border:1px solid #e4cd68;
   border-radius:50px;
-  color:#9c6a77;
+  color:#82691c;
   font:10px Arial,sans-serif;
   letter-spacing:.1em;
   text-transform:uppercase;
-  background:#fff8f7;
+  background:#fff9ce;
 }
 
 /* Keep them side by side on most phones too */
@@ -196,15 +243,50 @@
   }
 }
 
-    .letter{margin:78px auto 45px;max-width:700px;text-align:center;background:#fffdfbbd;border:1px solid #ead7d7;border-radius:25px;padding:55px clamp(21px,6vw,70px);box-shadow:0 14px 40px #9c647512}
-    .letter p{font-size:18px;line-height:1.9;color:#715b63}
-    .signature{font-style:italic;color:var(--rose)!important;font-size:22px!important}
-    footer{text-align:center;color:#aa8b92;font:12px Arial,sans-serif;letter-spacing:.08em;padding-top:15px}
+.letter{
+  margin:78px auto 45px;
+  max-width:700px;
+  text-align:center;
+  background:#fffdf0d9;
+  border:1px solid #eadb91;
+  border-radius:25px;
+  padding:55px clamp(21px,6vw,70px);
+  box-shadow:0 14px 40px #b9972716;
+}
+
+.letter p{
+  font-size:18px;
+  line-height:1.9;
+  color:#746536;
+}
+
+.signature{
+  font-style:italic;
+  color:#d7a20d!important;
+  font-size:22px!important;
+}
+
+footer{
+  text-align:center;
+  color:#9d8846;
+  font:12px Arial,sans-serif;
+  letter-spacing:.08em;
+  padding-top:15px;
+}
 
   </style>
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
+  <div class="bananas" aria-hidden="true">
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+  <span class="banana">🍌</span>
+</div>
 <main>
   <header>
     <h1>One year of<br />being silly with you!</h1>
